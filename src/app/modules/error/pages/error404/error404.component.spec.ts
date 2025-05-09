@@ -11,7 +11,7 @@ describe('Error404Component', () => {
       imports: [Error404Component]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(Error404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();

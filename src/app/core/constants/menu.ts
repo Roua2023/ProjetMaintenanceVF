@@ -8,11 +8,11 @@ export class Menu {
       items: [
         {
           icon: 'assets/icons/heroicons/outline/chart-pie.svg',
-          label: 'Accueil',
+          label: '🔻',
           route: '/dashboard',
           children: [
-          //  { label: 'Nfts', route: '/dashboard/nfts' },
-            // { label: 'Podcast', route: '/dashboard/podcast' },
+            { label: 'Accueil', route: '/dashboard/nfts' },
+          //   { label: 'Podcast', route: '/dashboard/podcast' },
           ],
         },
         {
@@ -39,20 +39,30 @@ export class Menu {
           icon: 'assets/icons/heroicons/outline/cube.svg',
           label: 'Lean Maintenance',
           route: '/components',
-          children: [{ label: 'Table', route: '/components/table' }],
+          children: [{ label: 'Voir Cours ->', route: '/components/table' }],
         },
           {
           icon: 'assets/icons/heroicons/outline/exclamation-triangle.svg',
           label: 'Maintenance predictive ',
           route: '/errors',
           children: [
-            { label: '404', route: '/errors/404' },
-            { label: '500', route: '/errors/500' },
-            { label: '402', route: '/errors/402' },
-            { label: '401', route: '/errors/401' },
-            { label: '405', route: '/errors/405' },
-            { label: '406', route: '/errors/406' },
-            { label: '407', route: '/errors/407' },
+            // { label: '404', route: '/errors/404' },
+            // { label: '500', route: '/errors/500' },
+           // { label: '402', route: '/errors/402' },
+            { label: 'Voir Cours ->', route: '/errors/401' },
+           
+          ],
+        },
+           {
+          icon: 'assets/icons/heroicons/outline/exclamation-triangle.svg',
+          label: 'Pronostic et PHM ',
+          route: '/errors',
+          children: [
+            // { label: '404', route: '/errors/404' },
+            // { label: '500', route: '/errors/500' },
+           // { label: '402', route: '/errors/402' },
+            { label: 'Voir Cours ->', route: '/errors/401' },
+           
           ],
         },
       ],
@@ -79,12 +89,12 @@ export class Menu {
       ],
     },
     {
-      group: 'Config',
+      group: 'Configuration',
       separator: false,
       items: [
         {
           icon: 'assets/icons/heroicons/outline/cog.svg',
-          label: 'Settings',
+          label: 'parametres',
           route: '/settings',
         },
         {
@@ -94,7 +104,7 @@ export class Menu {
         },
         {
           icon: 'assets/icons/heroicons/outline/folder.svg',
-          label: 'Folders',
+          label: 'Dossiers',
           route: '/folders',
           children: [
             { label: 'Current Files', route: '/folders/current-files' },

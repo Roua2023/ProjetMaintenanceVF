@@ -2,26 +2,24 @@
   <div class="flex items-center">
     <img [src]="auction.image" class="rounded-xs mr-2 h-10 w-10 flex-none" alt="" />
     <div class="flex flex-col justify-items-start">
-      <a href="#" class="text-foreground mb-1 text-sm font-semibold">{{ auction.title }}</a>
-      <span class="text-muted-foreground/50 text-xs font-semibold">{{ auction.creator }}</span>
+      <a href="#" class="text-foreground mb-1 text-sm font-semibold">{{ auction.nom }}</a>
+      <span class="text-muted-foreground/50 text-xs font-semibold">{{ auction.prenom }}</span>
     </div>
   </div>
 </td>
 <td class="py-2 pl-2 text-right">
-  <span class="text-muted-foreground text-sm font-semibold">{{ auction.instant_price }} ETH</span>
+  <span class="text-muted-foreground text-sm font-semibold">{{ auction.nom }} </span>
 </td>
 <td class="py-2 pl-2 text-right">
-  <span class="text-muted-foreground text-sm font-semibold">{{ auction.price | currency }}</span>
+  <span class="text-muted-foreground text-sm font-semibold">{{ auction.prenom  }}</span>
 </td>
 <td class="py-2 pl-2 text-right">
   <!-- <div class="ml-4 flex items-center justify-start">
 		<img [src]="auction.avatar" class="mr-3 h-8 w-8 rounded-b-md" alt="" />
 	</div> -->
-  <span class="text-muted-foreground text-sm font-semibold">{{ auction.last_bid }} ETH</span>
+  <span class="text-muted-foreground text-sm font-semibold">{{ auction.email }} </span>
 </td>
-<td class="py-2 pl-2 text-right">
-  <span class="text-muted-foreground text-sm font-semibold">{{ auction.ending_in }}</span>
-</td>
+
 <td class="py-2 pl-2 text-right">
   <div class="flex justify-end">
     <button

@@ -11,7 +11,7 @@ describe('Error500Component', () => {
       imports: [Error500Component]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(Error500Component);
     component = fixture.componentInstance;
     fixture.detectChanges();

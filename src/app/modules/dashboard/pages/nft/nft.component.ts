@@ -24,27 +24,21 @@ export class NftComponent implements OnInit {
     this.nft = [
       {
         id: 34356771,
-        title: 'Introduction à la maintenance',
-        creator: '...',
-        instant_price:0,
-        price: 0,
-        ending_in: 'Types de maintenance : adaptez votre stratégie',
-        last_bid: 0,
+        nom: 'Introduction à la maintenance',
         image: './assets/images/Quoi.jpg',
-        avatar: './assets/images/logoMaint.jpg',
       },
+    
       {
         id: 34356772,
-        title: 'Tout savoir sur les outils de gestion de la maintenance industrielle',
-        price: 548.79,
-        last_bid:0,
+        nom: 'Tout savoir sur les outils de gestion de la maintenance industrielle...',
+      
+        
         image: './assets/images/img3.jpg',
       },
       {
         id: 34356773,
-        title: 'Tout savoir sur les méthodes de gestion de la maintenance industrielle',
-        price: 0,
-        last_bid: 0,
+        nom: 'Tout savoir sur les méthodes de gestion de la maintenance industrielle...',
+        
         image: './assets/images/img2.jpg',
       },
     ];
