@@ -5,7 +5,7 @@ import { Nft } from '../../../models/nft';
 @Component({
   selector: '[nft-single-card]',
   templateUrl: './nft-single-card.component.html',
-  imports: [NgStyle, CurrencyPipe],
+  imports: [NgStyle],
 })
 export class NftSingleCardComponent implements OnInit {
   @Input() nft: Nft = <Nft>{};

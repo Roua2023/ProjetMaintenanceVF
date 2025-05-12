@@ -3,6 +3,6 @@ export interface Nft {
   nom: string;
   prenom?: string;
   email?: string;
- 
+ lien?:string;
   image: string;
 }

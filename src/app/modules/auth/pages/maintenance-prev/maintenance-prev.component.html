@@ -1,0 +1,314 @@
+
+
+<h1 class="text-5xl font-bold text-yellow-500 text-center mt-16">
+  Maintenance Préventive 
+</h1>
+
+<div class="flex min-h-screen  items-center bg-gray-100 justify-center p-10">
+  <a routerLink="/dashboard/accueil" class="fixed bottom-5 right-5 bg-cyan-600 text-blue p-3 rounded-full shadow-lg hover:bg-cyan-700">
+  Retour  ->  🏠
+</a>
+
+  <!-- Partie gauche : cadre du cours -->
+  <div class="w-[45%] max-h-[90vh] p-6 overflow-y-auto  rounded-xl shadow-lg mb-7">
+    
+    <!-- Titre du chapitre avec couleur dynamique -->
+   <h2
+  class="text-2xl font-semibold mb-4 text-center"
+  [ngClass]="{
+    'text-blue-600': currentChapter === 1,
+    'text-green-600': currentChapter === 2,
+    'text-purple-600': currentChapter === 3,
+    'text-red-600': currentChapter === 4,
+    'text-pink-600': currentChapter === 5,
+    'text-teal-600': currentChapter === 6,
+    'text-yellow-600': currentChapter === 7,
+    'text-indigo-600': currentChapter === 8,
+    'text-orange-600': currentChapter === 9,
+    'text-lime-600': currentChapter === 10,
+    'text-emerald-600': currentChapter === 11,
+    
+  }"
+>
+  Chapitre {{ currentChapter }} : {{ chapterTitles [currentChapter] }}
+</h2>
+
+
+
+    <!-- Contenus des chapitres -->
+    <div *ngIf="currentChapter === 1" class=" space-y-2 text-black -700 text-base">
+         <br>
+       <br>
+      <p>
+La maintenance préventive est l’acte qui consiste à effectuer des activités de maintenance planifiées pour aider à prévenir les défaillances. En d’autres termes, il s’agit de réparer les choses avant qu’elles ne tombent en panne.      <br>
+      
+      <div>
+       <strong class="text-yellow-700 text-base">            Comment fonctionne la maintenance préventive ?
+</strong>
+
+        <ul class="list-[square] list-inside space-y-2">
+          <li>
+Grâce au machine learning, à l'analyse des données opérationnelles et à la surveillance prédictive de l’état des actifs, les ingénieurs peuvent optimiser la maintenance et réduire les risques de fiabilité des opérations, qu’elles concernent une usine ou une entreprise. Les logiciels conçus pour la maintenance préventive aident à maintenir des opérations stables, à assurer la conformité aux garanties et à résoudre les problèmes avant qu'ils n'affectent la production.
+
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+<!--Mprevimg1-->
+    <div *ngIf="currentChapter === 2" class="text-text-black -700 text-base">
+        <br>
+        <br>
+      <p class="mb-2">Un plan de maintenance préventive doit contenir toutes les informations pertinentes nécessaires pour un entretien efficace du matériel et pour une prise en charge efficace des incidents. Il s’agit à la fois des informations techniques des installations et de leur entretien avec l’historique des interventions, mais également l’ensemble des objectifs  assignés à la production comme le nombre de pièces produites, les services proposés etc…afin de pouvoir établir une planification réaliste et anticipée</p>
+      <strong class="text-yellow-700 text-base"> Les opérations de maintenance préventive doivent répondre à trois exigences : </strong>
+        <br>
+      <ul class="list-[square] list-inside space-y-2">
+       <li>L’applicabilité : c’est-à-dire le potentiel de mise en place au sein des processus de l’entreprise.</li>
+        <li>L’efficacité : chaque opération doit permettre de réduire le taux de panne.</li>
+        <li>La profitabilité : chaque opération doit contribuer à améliorer la production et ainsi le retour sur investissement.</li>
+        
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+   <div *ngIf="currentChapter === 3" class="text-gray-700 text-base">
+      <!-- <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li><strong class="text-yellow-700 text-base">Acquisition des Données :</strong> Collecte de données de capteurs dans diverses conditions opérationnelles.</li>
+        <li><strong class="text-yellow-700 text-base">Prétraitement des Données : </strong>Suppression du bruit, élimination des valeurs aberrantes et conversion des données temporelles en données fréquentielles.</li>
+        <li><strong class="text-yellow-700 text-base">Identification des Indicateurs de Condition :</strong> Repérage des fonctionnalités qui changent de manière prévisible avec la dégradation du système.</li>
+        <li><strong class="text-yellow-700 text-base">Entraînement du Modèle :</strong> Utilisation des indicateurs pour entraîner des modèles d'apprentissage automatique (détection d'anomalies, classification des pannes, estimation de la RUL).</li>
+        <li><strong class="text-yellow-700 text-base">Déploiement et Intégration :</strong> Mise en œuvre sur le cloud ou sur appareils embarqués pour un suivi en temps réel.</li>
+      </ul> -->
+
+<!-- MaintPrevimg2-->
+      <p class="mb-2">
+      </p>
+    </div>
+
+
+
+
+
+
+    <div *ngIf="currentChapter === 4" class="text-gray-700 text-base">
+
+<!-- MaintPrevimg2-->
+      <p class="mb-2">Il est crucial en première étape de réaliser un inventaire complet des 
+        équipements et systèmes nécessitant une maintenance. Cette évaluation doit inclure les
+         détails tels que le modèle, la marque, l’année de fabrication, l’état actuel, 
+         et l’historique de maintenance de chaque équipement. L’objectif est d’avoir une vue 
+         d’ensemble claire qui servira de fondation à la planification de la maintenance.
+Par exemple la prévention du risque chimique.
+
+
+      </p>
+
+
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div *ngIf="currentChapter === 5" class="text-gray-700 text-base">
+     <p class="mb-2">La deuxième étape consiste à identifier les tâches spécifiques de maintenance préventive nécessaires pour chaque équipement. Cela peut inclure le nettoyage, la lubrification, les réglages, les inspections, et les remplacements de pièces. Les recommandations du fabricant et les normes industrielles doivent être prises en compte pour établir une liste exhaustive et pertinente de tâches.</p>
+    </div>
+
+
+
+
+    <div *ngIf="currentChapter === 6" class="text-gray-700 text-base">
+         <p class="mb-2">Une fois les tâches identifiées, il est important de planifier et de programmer la maintenance préventive. Cette planification doit tenir compte des priorités, de la fréquence nécessaire pour chaque tâche (quotidienne, hebdomadaire, mensuelle, annuelle), et des ressources disponibles. L’utilisation de logiciels de gestion de maintenance assistée par ordinateur pour gérer par exemple le planning des interventions (GMAO) peut grandement faciliter cette étape.</p>
+
+    </div>
+
+
+
+
+
+    <div *ngIf="currentChapter === 7" class="text-gray-700 text-base">
+      <p class="mb-2">
+      La mise en œuvre du plan de maintenance préventive nécessite la formation et l’engagement du personnel concerné. Des procédures claires et des instructions de travail doivent être mises en place. Le suivi régulier et la documentation de toutes les interventions sont essentiels pour évaluer l’efficacité du plan et apporter les ajustements nécessaires.
+      </p>
+     
+    </div>
+
+
+
+
+
+    <div *ngIf="currentChapter === 8" class="text-gray-700 text-base">
+      <div>
+      <p class="mb-2">Enfin, un plan de maintenance préventive ne doit pas être statique. Il est vital de réviser régulièrement le plan pour intégrer les retours d’expérience des parties prenantes, les modifications dans l’utilisation des équipements, ou les nouvelles recommandations des fabricants. L’amélioration continue permet d’optimiser la maintenance préventive pour qu’elle soit toujours alignée avec les objectifs de performance et de fiabilité de l’entreprise.</p>
+      </div>
+    </div>
+
+
+
+
+    <div *ngIf="currentChapter === 9" class="text-gray-700 text-base">
+
+ <p class="mb-2">Il existe quatre grands types de maintenance préventive. Chacune repose sur le concept de maintenance planifiée, bien qu'elles soient organisées et programmées de manière différente pour répondre aux objectifs métier spécifiques des entreprises.</p>
+
+        <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li><strong class="text-yellow-700 text-base">Maintenance préventive basée sur l'utilisation:</strong> 
+            La maintenance préventive basée sur l’utilisation est déclenchée par l'utilisation effective d'un actif. Ce type de maintenance prend en compte l’utilisation quotidienne moyenne ou l'exposition de l’actif aux conditions environnementales pour prévoir une date d’inspection ou de maintenance.</li>
+       
+       
+            <li><strong class="text-yellow-700 text-base">Maintenance préventive basée sur le calendrier/temps : </strong>
+
+                La maintenance préventive basée sur le calendrier ou le temps intervient à des moments planifiés, selon un intervalle défini. L'action de maintenance est déclenchée lorsque la date prévue approche et que les ordres de travail nécessaires sont créés.
+Voici 2 exemples de Maintenance préventive basée sur le calendrier/temps
+<!--2 images petitea zoomer-->
+              </li>
+
+
+    
+<li><strong class="text-yellow-700 text-base">Maintenance prédictive :</strong> 
+    
+    
+    La maintenance prédictive est conçue pour programmer des actions de maintenance corrective avant qu'une panne ne se produise.
+</li>
+
+<li><strong class="text-yellow-700 text-base">Maintenance prescriptive :</strong> 
+    
+    
+La maintenance prescriptive ne se contente pas d'indiquer qu'une panne va se produire et quand, mais explique également pourquoi elle survient. Ce type de maintenance aide à analyser et à déterminer les différentes options et résultats potentiels afin d'atténuer les risques pour l'exploitation.</li>
+      </ul>
+
+
+
+
+</div>
+
+
+
+ <div *ngIf="currentChapter === 10" class="text-gray-700 text-base">
+
+     <p class="mb-2">La maintenance préventive ne se résume pas uniquement à anticiper les risques de panne. Son rôle va beaucoup plus loin, en offrant un certain nombre d’avantages bénéfiques à l’échelle globale de votre entreprise et de celle de vos clients :</p>
+
+     <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li><strong class="text-yellow-700 text-base">Une durée de vie de vos équipements industriels prolongée</strong> 
+           En assurant un suivi rigoureux et en effectuant un entretien régulier de votre parc de machines, vous prolongez significativement la durée de vie de vos actifs industriels.
+            Ce qui contribue à renforcer la confiance de vos clients envers votre entreprise 
+            et à construire une relation durable avec eux en leur fournissant des
+             équipements opérationnels et performants.</li>
+
+    <li><strong class="text-yellow-700 text-base">Un coût de maintenance maîtrisé</strong> 
+        La maintenance préventive permet d’avoir une meilleure maîtrise du cycle de vie de vos équipements. Puisque vous anticipez les actions à mener en intervenant avant qu’une panne ne se produise, vous réduisez alors vos coûts et votre budget de maintenance.
+Cette démarche permet également de travailler plus sereinement en programmant de manière efficiente le remplacement de pièces détachées, tout en impactant le moins possible les opérateurs de production.
+</li>
+        
+ <li><strong class="text-yellow-700 text-base">Des temps d’arrêt réduits et planifiés</strong> 
+       En optant pour la maintenance préventive, vous diminuez le temps d’arrêt des machines et réduisez au maximum l’impact de cette opération sur l’activité globale de vos clients. Ces derniers peuvent ainsi planifier leur production et respecter un rythme de production optimal (en respectant leurs délais et engagements) et améliorer la productivité
+        de leurs équipes grâce à un processus opérationnel fluide et stable.
+</li>
+
+
+ <li><strong class="text-yellow-700 text-base">Des conditions de travail optimales</strong> 
+       Mettre en place une maintenance préventive, c’est aussi améliorer les conditions de travail des collaborateurs de votre entreprise cliente. Cela contribue à réduire les risques d’accidents graves pouvant être provoqués par une maintenance industrielle défaillante des équipements, tout en offrant aux équipes la possibilité
+        de travailler dans de bonnes conditions et sur des machines fiables et performantes.
+</li>
+
+      </ul>
+</div>
+
+
+
+
+<div *ngIf="currentChapter === 11" class="text-gray-700 text-base">
+  <!-- Évaluation -->
+  <div class="mt-6 p-4 border border-gray-300 rounded-lg bg-gray-50">
+    <h3 class="text-lg font-semibold text-blue-700 mb-2">📝 Mini-Évaluation</h3>
+    <p class="mb-2 font-medium">❓ Quelle est la différence principale entre la maintenance préventive et la maintenance prédictive ?</p>
+    <ul class="mb-2 space-y-2">
+      <li>🔘 La maintenance préventive est effectuée à intervalles réguliers, sans tenir compte de l’état réel de l’équipement.</li>
+      <li>🔘 La maintenance prédictive repose sur la collecte de données en temps réel pour anticiper les pannes.</li>
+      <li>🔘 Les deux types utilisent exactement les mêmes méthodes.</li>
+    </ul>
+
+    <!-- Bouton Réponse -->
+    <span class="text-blue-600 cursor-pointer underline" (click)="showAnswer = !showAnswer">
+      Afficher la réponse
+    </span>
+
+    <!-- Réponse affichée si cliqué -->
+    <p *ngIf="showAnswer" class="mt-4 text-green-600 italic">
+      ✅ Réponse correcte : la deuxième. La maintenance prédictive utilise des capteurs et des données pour anticiper les pannes avant qu'elles ne surviennent. 📊🔧
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Boutons navigation -->
+    <div class="flex justify-between items-center mt-6">
+      <button
+        class="px-4 py-2 rounded bg-gray-300 text-gray-800 hover:bg-gray-400 transition disabled:opacity-50"
+        (click)="previousChapter()"
+        [disabled]="currentChapter === 1">
+        👈 Chapitre précédent
+      </button>
+
+      <button
+        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition disabled:bg-gray-400"
+        (click)="nextChapter()"
+        [disabled]="currentChapter === 11">
+        Chapitre suivant 👉
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+ <!-- Partie droite : image -->
+  <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+  <img *ngIf="currentChapter === 1" src="assets/images/MPrev/intro.png" alt="Définition de la maintenance" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 2" src="assets/images/MPrev/Mprevimg1.png" alt="Objectifs de la maintenance" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 3" src="assets/images/MPrev/Mprevimg1.png" alt="Enjeux de la maintenance" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 4" src="assets/images/MPrev/MaintPrevimg3.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+    <img *ngIf="currentChapter === 5" src="assets/images/MPrev/taches.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 6" src="assets/images/MPrev/planp.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 7" src="assets/images/MPrev/types.png" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 8" src="assets/images/MPrev/types.png" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 9" src="assets/images/MPrev/types.png" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+    <img *ngIf="currentChapter === 10" src="assets/images/MPrev/types.png" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+      <img *ngIf="currentChapter === 11" src="assets/images/eval.jpeg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+
+
+
+</div>
+</div>
+

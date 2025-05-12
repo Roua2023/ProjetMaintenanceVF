@@ -1,0 +1,33 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center px-4">
+    <a routerLink="/dashboard/accueil" class="fixed top-5 left-5 bg-cyan-600 text-blue p-3 rounded-full shadow-lg hover:bg-cyan-700">
+  <- Retour 🏠
+</a>
+
+  
+  <h1 class="text-4xl font-bold text-red-800 mb-8">GMAO 4.0</h1>
+
+  <div class="w-full max-w-4xl bg-blue shadow-xl rounded-xl p-4">
+    <img
+      [src]="currentImage"
+      alt="Image Maintenance"
+      class="rounded-lg w-full transition-transform duration-300 hover:scale-105"
+    />
+  </div>
+
+  <div class="mt-6 flex gap-6">
+    <button
+      class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg shadow disabled:opacity-50"
+      (click)="previousImage()"
+      [disabled]="current === 0"
+    >
+      ⏪ Précédent
+    </button>
+    <button
+      class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg shadow disabled:opacity-50"
+      (click)="nextImage()"
+      [disabled]="current === images.length - 1"
+    >
+      Suivant ⏩
+    </button>
+  </div>
+</div>

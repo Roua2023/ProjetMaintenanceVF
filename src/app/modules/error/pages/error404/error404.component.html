@@ -1,1 +1,34 @@
-<p>error404 works!</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page non trouvée</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" font-sans">
+
+  <!-- Container for the error page -->
+  <div class="min-h-screen flex flex-col items-center justify-center text-center py-12 px-6 sm:px-8">
+    
+    <!-- Error message -->
+    <div class="max-w-md w-full  p-8 rounded-lg shadow-lg">
+      <h1 class="text-6xl font-extrabold text-amber-300">404</h1>
+      <p class="text-lg text-gray-700 mt-2">Désolé, la page que vous cherchez n'existe pas.</p>
+      <p class="text-gray-500 mt-4">Il semble que cette page ait été déplacée ou supprimée. Vérifiez l'URL ou retournez à la page d'accueil.</p>
+      
+      <!-- Button to go back to the homepage -->
+      <a href="/dashboard/accueil" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+        Retour à l'accueil
+      </a>
+    </div>
+
+    <!-- Optional footer or extra information -->
+    <div class="mt-8 text-sm text-gray-400">
+      <p>&copy; 2025 Portfolio Maintenance Industrielle. Tous droits réservés.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

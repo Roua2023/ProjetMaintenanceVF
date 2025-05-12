@@ -1,0 +1,200 @@
+
+
+<h1 class="text-5xl font-bold text-yellow-500 text-center mt-16">
+  Maintenance Prédictive
+</h1>
+
+<div class="flex min-h-screen  items-center  justify-center p-10">
+
+    <a routerLink="/dashboard/accueil" class="fixed bottom-5 right-5 bg-cyan-600 text-blue p-3 rounded-full shadow-lg hover:bg-cyan-700">
+  Retour  ->  🏠
+</a>
+
+  <!-- Partie gauche : cadre du cours -->
+  <div class="w-[45%] max-h-[90vh] p-6 overflow-y-auto  rounded-xl shadow-lg mb-7">
+    
+    <!-- Titre du chapitre avec couleur dynamique -->
+    <h2
+  class="text-2xl font-semibold mb-4 text-center"
+  [ngClass]="{
+    'text-blue-600': currentChapter === 1,
+    'text-green-600': currentChapter === 2,
+    'text-purple-600': currentChapter === 3,
+    'text-red-600': currentChapter === 4,
+    'text-pink-600': currentChapter === 5,
+    'text-teal-600': currentChapter === 6,
+    'text-yellow-600': currentChapter === 7,
+    'text-indigo-600': currentChapter === 8,
+    'text-orange-600': currentChapter === 9
+  }"
+>
+  Chapitre {{ currentChapter }} : {{ chapterTitles[currentChapter] }}
+</h2>
+
+
+    <!-- Contenus des chapitres -->
+    <div *ngIf="currentChapter === 1" class=" space-y-2 text-black -700 text-base">
+         <br>
+       <br>
+      <p>
+La maintenance prédictive est une approche proactive qui permet d'estimer quand une panne de machine va se produire. Elle permet de planifier à l'avance la maintenance, de mieux gérer les stocks de pièces détachées, d'éliminer les arrêts non planifiés et de maximiser la durée de vie des équipements.      </p>
+      <br>
+      
+      <div>
+       <strong class="text-yellow-700 text-base">Les Différentes Stratégies de Maintenance :</strong>
+
+        <ul class="list-[square] list-inside space-y-2">
+          <li>Maintenance Réactive : Utilisation de la machine jusqu'à sa limite et réparation après panne.</li>
+<li>
+  <a href="#maintenance-preventive" class="text-white-600 hover:underline">
+    Maintenance Préventive : Vérifications régulières pour prévenir les pannes.
+  </a>
+</li>
+          <li>Maintenance Prédictive : Prédiction des pannes et identification des problèmes dans les machines complexes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngIf="currentChapter === 2" class="text-text-black -700 text-base">
+        <br>
+        <br>
+      <p class="mb-2">La maintenance prédictive permet de réduire les temps d'arrêt, d'optimiser les stocks de pièces et de maximiser la durée de vie des équipements. Elle offre notamment :</p>
+     
+        <br>
+      <ul class="list-[square] list-inside space-y-2">
+       <li>Réduction des coûts de maintenance</li>
+        <li>Amélioration de la sécurité des opérations</li>
+        <li>Optimisation de l'utilisation des ressources</li>
+        <li>Augmentation de la fiabilité des systèmes</li>
+      </ul>
+    </div>
+
+   <div *ngIf="currentChapter === 3" class="text-gray-700 text-base">
+      <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li><strong class="text-yellow-700 text-base">Acquisition des Données :</strong> Collecte de données de capteurs dans diverses conditions opérationnelles.</li>
+        <li><strong class="text-yellow-700 text-base">Prétraitement des Données : </strong>Suppression du bruit, élimination des valeurs aberrantes et conversion des données temporelles en données fréquentielles.</li>
+        <li><strong class="text-yellow-700 text-base">Identification des Indicateurs de Condition :</strong> Repérage des fonctionnalités qui changent de manière prévisible avec la dégradation du système.</li>
+        <li><strong class="text-yellow-700 text-base">Entraînement du Modèle :</strong> Utilisation des indicateurs pour entraîner des modèles d'apprentissage automatique (détection d'anomalies, classification des pannes, estimation de la RUL).</li>
+        <li><strong class="text-yellow-700 text-base">Déploiement et Intégration :</strong> Mise en œuvre sur le cloud ou sur appareils embarqués pour un suivi en temps réel.</li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentChapter === 4" class="text-gray-700 text-base">
+      <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li>Qu'est-ce qu'un Indicateur de Condition ? : Fonctionnalités dont le comportement change de manière prévisible lors de la dégradation du système.</li>
+        <li>Méthodes Basées sur les Signaux : Caractéristiques temporelles (moyenne, variance, asymétrie, kurtosis), fréquentielles (puissance de bande, valeurs de crête, fréquences de crête, entropie spectrale) et temps-fréquence (moments spectraux conditionnels).</li>
+        <li>Méthodes Basées sur les Modèles : Modèles statiques et dynamiques, estimateurs d'état.</li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentChapter === 5" class="text-gray-700 text-base">
+      <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li>Modèle de Survie : Utilisé quand on dispose de données de panne de machines similaires, sans historiques complets.</li>
+        <li>Modèle de Dégradation : Employé quand les données couvrent un état sain jusqu'à la panne, avec un seuil de sécurité.</li>
+        <li>Modèle de Similarité : Utilisé lorsque les données couvrent la dégradation complète d'un système.</li>
+        <li>Exemple : Estimation de la RUL pour un moteur d'avion en se basant sur les données historiques d'une flotte similaire.</li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentChapter === 6" class="text-gray-700 text-base">
+      <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li>Présentation de la Pompe Triplex : Utilisée dans l'industrie pétrolière et gazière, avec des pannes courantes telles que fuite de joint, entrée bloquée ou roulement usé.</li>
+        <li>Workflow : Acquisition de données de pression, prétraitement (suppression du bruit, alignement temporel), identification des indicateurs, entraînement d'un modèle de machine learning et déploiement dans un système de surveillance en temps réel.</li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentChapter === 7" class="text-gray-700 text-base">
+      <p>
+        MATLAB met à disposition des outils dédiés, tels que :
+      </p>
+      <ul class="list-[square] list-inside space-y-2 text-gray-700">
+        <li>Predictive Maintenance Toolbox : Pour concevoir des indicateurs de condition et estimer la durée de vie restante.</li>
+        <li>Classification Learner App : Pour explorer et sélectionner les variables importantes.</li>
+        <li>Wavelet Signal Denoiser App : Pour visualiser et supprimer le bruit des signaux.</li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentChapter === 8" class="text-gray-700 text-base">
+      <div>
+        <ul class="list-[square] list-inside space-y-2 text-gray-700">
+          <li>Défis : Manque de données de panne, complexité des systèmes, intégration des algorithmes et interprétabilité des modèles.</li>
+          <li>Solutions : Utilisation de modèles mathématiques pour générer des données synthétiques, approches hybrides (données et modèles physiques), déploiement adaptatif sur le cloud ou appareils embarqués, et techniques d'interprétation des modèles machine learning.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngIf="currentChapter === 9" class="text-gray-700 text-base">
+     <ul class="list-[square] list-inside space-y-2 text-gray-700">
+          <li>
+            La maintenance prédictive représente une avancée majeure dans la gestion des actifs industriels,
+            permettant une maintenance plus efficace et moins coûteuse. Grâce à MATLAB, les ingénieurs peuvent
+            développer des solutions sur mesure.
+          </li>
+          <li>
+            L'avenir promet une intégration accrue avec l'IoT, l'intelligence artificielle et l'apprentissage automatique,
+            ouvrant la voie à des systèmes encore plus intelligents et autonomes.
+          </li>
+        </ul>
+      <!-- Évaluation -->
+      <div class="mt-6 p-4 border border-gray-300 rounded-lg bg-gray-50">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">📝 Mini-Évaluation</h3>
+        <p class="mb-2">Quelle est la différence principale entre maintenance préventive et maintenance prédictive ?</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>🔘 La préventive utilise l'IA...</li>
+          <li>🔘 La prédictive repose sur des vérifications périodiques</li>
+          <li>🔘 La prédictive anticipe les pannes à l'aide de données et d'analyses</li>
+        </ul>
+        <p class="mt-4 text-green-600 italic">Réponse correcte : la dernière ! 🎉</p>
+      </div>
+    </div>
+
+    <!-- Boutons navigation -->
+    <div class="flex justify-between items-center mt-6">
+      <button
+        class="px-4 py-2 rounded bg-gray-300 text-gray-800 hover:bg-gray-400 transition disabled:opacity-50"
+        (click)="previousChapter()"
+        [disabled]="currentChapter === 1">
+        👈 Chapitre précédent
+      </button>
+
+      <button
+        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition disabled:bg-gray-400"
+        (click)="nextChapter()"
+        [disabled]="currentChapter === 9">
+        Chapitre suivant 👉
+      </button>
+    </div>
+  </div>
+ <!-- Partie droite : image -->
+
+ <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+  <img *ngIf="currentChapter === 1" src="assets/images/Predictive-Maintenance.jpg" alt="Définition de la maintenance" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 2" src="assets/images/Predictive-Maintenance.jpg" alt="Objectifs de la maintenance" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 3" src="assets/images/Predictive-Maintenance.jpg" alt="Enjeux de la maintenance" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 4" src="assets/images/Predictive-Maintenance.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+    <img *ngIf="currentChapter === 5" src="assets/images/Predictive-Maintenance.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 6" src="assets/images/Predictive-Maintenance.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 7" src="assets/images/Predictive-Maintenance.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 8" src="assets/images/Predictive-Maintenance.jpg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+  <img *ngIf="currentChapter === 9" src="assets/images/eval.jpeg" class="w-full h-full max-h-150 object-cover rounded-lg shadow-md">
+
+</div>
+
+  <!-- <div class="w-[45%] ml-10 flex items-center justify-center mb-8">
+    <img
+      src="assets/images/Predictive-Maintenance.jpg"
+      alt="Maintenance"
+      class="max-w-full max-h-[80vh] rounded-lg shadow-md"
+    /> -->
+
+    
+
+  <!-- Partie droite : image 
+  <div class="w-[45%] ml-10 flex items-center justify-center">
+    <img
+      [src]="'assets/images/chapitre' + currentChapter + '.jpg'"
+      [alt]="'Image du chapitre ' + currentChapter"
+      class="max-w-full max-h-[80vh] rounded-lg shadow-md"
+    />
+  </div>-->
+</div>

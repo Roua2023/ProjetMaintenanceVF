@@ -11,7 +11,7 @@ export class Menu {
           label: '🔻',
           route: '/dashboard',
           children: [
-            { label: 'Accueil', route: '/dashboard/nfts' },
+            { label: 'Accueil', route: '/dashboard/accueil' },
           //   { label: 'Podcast', route: '/dashboard/podcast' },
           ],
         },
@@ -21,25 +21,29 @@ export class Menu {
           route: '/auth',
           children: [
            
-             { label: 'Objectifs et importance', route: '/auth/forgot-password' },
-            // { label: 'Maintenance corrective', route: '/auth/new-password' },
-             { label: 'Maintenance préventive', route: '/auth/two-steps' },
-            // { label: 'Sign up', route: '/auth/sign-up' },
-            // { label: 'Sign in', route: '/auth/sign-in' },
+             { label: 'Objectifs et importance', route: '/auth/generalites' },
+            { label: 'Maintenance corrective', route: '/auth/maintennacecorrec' },
+            { label: 'Maintenance préventive', route: '/auth/maintennaceprev' },
+                        
+
+          
           ],
         },
       
         {
           icon: 'assets/icons/heroicons/outline/cube.svg',
-          label: 'Maintenance et GMAO 4.0',
+          label: 'Maintenance4.0 et GMAO 4.0',
           route: '/components',
-          children: [{ label: 'Table', route: '/components/table' }],
+          children: [ 
+             { label: 'Maintenance4.0', route: '/auth/maintennace4' },
+            { label: 'Gmao4.0', route: '/auth/gmao4' },
+          ],
         },
         {
           icon: 'assets/icons/heroicons/outline/cube.svg',
           label: 'Lean Maintenance',
           route: '/components',
-          children: [{ label: 'Voir Cours ->', route: '/components/table' }],
+          children: [{ label: 'Voir Cours ->', route: '/auth/lean' }],
         },
           {
           icon: 'assets/icons/heroicons/outline/exclamation-triangle.svg',
@@ -49,7 +53,7 @@ export class Menu {
             // { label: '404', route: '/errors/404' },
             // { label: '500', route: '/errors/500' },
            // { label: '402', route: '/errors/402' },
-            { label: 'Voir Cours ->', route: '/errors/401' },
+          { label: 'Maintenance prédictive', route: '/auth/maintePred' },
            
           ],
         },
@@ -58,10 +62,9 @@ export class Menu {
           label: 'Pronostic et PHM ',
           route: '/errors',
           children: [
-            // { label: '404', route: '/errors/404' },
-            // { label: '500', route: '/errors/500' },
+            { label: 'PHM', route: '/auth/phm' },
+            { label: 'Pronostic', route: '/auth/prono' },
            // { label: '402', route: '/errors/402' },
-            { label: 'Voir Cours ->', route: '/errors/401' },
            
           ],
         },
@@ -74,12 +77,12 @@ export class Menu {
         {
           icon: 'assets/icons/heroicons/outline/download.svg',
           label: 'Certifications',
-          route: '/components/table',
+          route: '/components/certifs',
         },
         {
           icon: 'assets/icons/heroicons/outline/gift.svg',
           label: 'Lien utiles',
-          route: '/gift',
+          route: '/components/liens',
         },
         {
           icon: 'assets/icons/heroicons/outline/users.svg',

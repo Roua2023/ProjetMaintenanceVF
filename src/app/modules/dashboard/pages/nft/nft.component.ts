@@ -13,7 +13,6 @@ import { Nft } from '../../models/nft';
     NftHeaderComponent,
     NftDualCardComponent,
     NftSingleCardComponent,
-    NftChartCardComponent,
     NftAuctionsTableComponent,
   ],
 })
@@ -22,26 +21,26 @@ export class NftComponent implements OnInit {
 
   constructor() {
     this.nft = [
-      {
-        id: 34356771,
-        nom: 'Introduction à la maintenance',
-        image: './assets/images/Quoi.jpg',
-      },
-    
-      {
-        id: 34356772,
-        nom: 'Tout savoir sur les outils de gestion de la maintenance industrielle...',
-      
-        
-        image: './assets/images/img3.jpg',
-      },
-      {
-        id: 34356773,
-        nom: 'Tout savoir sur les méthodes de gestion de la maintenance industrielle...',
-        
-        image: './assets/images/img2.jpg',
-      },
-    ];
+  {
+    id: 34356771,
+    nom: 'Introduction à la maintenance',
+    image: './assets/images/Quoi.jpg',
+    lien: 'https://mobility-work.com/fr/blog/methode-maintenance-industrielle/'
+  },
+  {
+    id: 34356772,
+    nom: 'Tout savoir sur les outils de gestion de la maintenance industrielle...',
+    image: './assets/images/img3.jpg',
+    lien: 'https://mobility-work.com/fr/blog/methode-maintenance-industrielle/'
+  },
+  {
+    id: 34356773,
+    nom: 'Tout savoir sur les méthodes de gestion de la maintenance industrielle...',
+    image: './assets/images/img2.jpg',
+    lien: 'https://www.nomadia-group.com/ressources/blog/principales-methodes-de-gestion-de-la-maintenance-industrielle/'
+  }
+];
+
   }
 
   ngOnInit(): void {}

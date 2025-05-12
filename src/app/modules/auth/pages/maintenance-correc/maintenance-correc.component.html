@@ -1,0 +1,232 @@
+
+
+<h1 class="text-5xl font-bold text-yellow-500 text-center mt-16">
+  Maintenance Corrective 
+</h1>
+
+<div class="flex min-h-screen  items-center  justify-center p-10">
+  <a routerLink="/dashboard/accueil" class="fixed bottom-5 right-5 bg-cyan-600 text-blue p-3 rounded-full shadow-lg hover:bg-cyan-700">
+  Retour  ->  🏠
+</a>
+
+  <!-- Partie gauche : cadre du cours -->
+  <div class="w-[45%] max-h-[90vh] p-6 overflow-y-auto  rounded-xl shadow-lg mb-7">
+    
+    <!-- Titre du chapitre avec couleur dynamique -->
+   <h2
+  class="text-2xl font-semibold mb-4 text-center"
+  [ngClass]="{
+    'text-blue-600': currentChapter === 1,
+    'text-green-600': currentChapter === 2,
+    'text-cyan-600': currentChapter === 3,
+    'text-red-600': currentChapter === 4,
+    'text-pink-600': currentChapter === 5,
+    'text-teal-600': currentChapter === 6,
+    'text-yellow-600': currentChapter === 7,
+    'text-indigo-600': currentChapter === 8,
+    'text-orange-600': currentChapter === 9,
+    'text-lime-600': currentChapter === 10,
+    'text-emerald-600': currentChapter === 11,
+    
+  }"
+>
+  Chapitre {{ currentChapter }} : {{ chapterTitles [currentChapter] }}
+</h2>
+
+
+
+    <!-- Contenus des chapitres -->
+    <div *ngIf="currentChapter === 1" class=" space-y-2 text-black -700 text-base">
+         <br>
+       <br>
+      
+      
+      <div>
+      <p>Louis travaille depuis cinq ans dans une usine de fabrication de pièces automobiles. 
+        Son quotidien ? Surveiller les machines, diagnostiquer les problèmes, et surtout, intervenir quand 
+        une panne surgit. Ce matin-là, la presse hydraulique numéro 7 s’arrête brusquement.
+         Toute la chaîne de production est bloquée. Louis soupire. Une fois de plus, il va falloir réparer dans l’urgence.<br>
+Mais ce jour-là, quelque chose change. Louis décide de noter chaque étape de sa réparation, de mieux comprendre les causes et de réfléchir à une manière d’éviter que cela ne se reproduise. C’est ainsi qu’il commence à s’intéresser de près à la maintenance corrective… et à tout ce qu’elle peut lui apprendre.
+</p>
+
+    
+      </div>
+    </div>
+
+<!--Mprevimg1-->
+    <div *ngIf="currentChapter === 2" class="text-text-black -700 text-base">
+        <br>
+        <br>
+      <p class="mb-2">La maintenance corrective désigne l’ensemble des interventions réalisées après la défaillance d’un équipement ou d’un système. Autrement dit, on attend qu’un problème survienne, puis on agit pour le résoudre. Contrairement à la maintenance préventive ou prédictive, elle n’anticipe pas la panne, elle la corrige.</p>
+      <strong class="text-yellow-700 text-base"> Définition officielle (norme NF EN 13306) : </strong>
+        <br>
+
+        <p>Maintenance corrective : « maintenance exécutée après détection d’une panne et destinée à remettre un bien 
+            dans un état dans lequel il peut accomplir une fonction requise. »<br></p><strong class="text-teal-300 text-base">On distingue deux types :</strong>
+      <ul class="list-[square] list-inside space-y-2">
+       <li><strong class="text-teal-600 text-base">Maintenance corrective immédiate : </strong>intervention dès que possible, parfois sans arrêt formel du processus.</li>
+        <li><strong class="text-teal-600 text-base">Maintenance corrective différée :</strong> intervention planifiée après analyse, lorsque cela n’affecte pas la sécurité ou la production.</li>
+        
+      </ul>
+    </div>
+
+
+
+
+
+   <div *ngIf="currentChapter === 3" class="text-gray-700 text-base">
+      <ul >
+        <li>
+            <strong class="text-cyan-500 text-base">1. Méthode des 5 pourquoi</strong> 
+            Technique simple qui consiste à poser cinq fois la question "Pourquoi ?" pour remonter à la cause racine d’un problème.
+ <strong class="text-lime-700 text-base">Exemple : Pourquoi la machine s’est arrêtée ? → Courroie cassée. Pourquoi ? → Trop tendue. Pourquoi ? → Mauvais réglage, etc.</strong> 
+</li>
+        
+      </ul> 
+  <p class="mb-2">
+<strong class="text-cyan-500 text-base">2.Analyse des causes de défaillance (RCA – Root Cause Analysis)</strong>
+Méthodologie complète pour identifier les causes fondamentales d’un problème, à l’aide de diagrammes comme Ishikawa (ou "arête de poisson") ou arbres de défaillance.
+      </p>
+ <p class="mb-2">
+<strong class="text-cyan-500 text-base">3.GMAO (Gestion de Maintenance Assistée par Ordinateur)</strong>
+Méthodologie complète pour identifier les causes fondamentales d’un problème, à l’aide de diagrammes comme Ishikawa (ou "arête de poisson") ou arbres de défaillance.
+      </p>
+ <p> <strong class="text-cyan-500 text-base">4.Indicateurs de performance (KPI)</strong> </p>
+        <ul>
+         <li>
+           
+ <strong class="text-green-400 text-base">MTTR (Mean Time To Repair): </strong> 
+ <p>Temps moyen de réparation</p>
+</li>
+
+ <li>    
+ <strong class="text-green-400 text-base">MDT (Mean Down Time): </strong> 
+  <p> Durée moyenne d’indisponibilité.</p>
+</li>
+
+ <li>     
+ <strong class="text-green-400 text-base">Taux de pannes récurrentes.
+
+ </strong> 
+  
+</li>
+        
+      </ul> 
+    </div>
+
+
+
+
+
+
+    <div *ngIf="currentChapter === 4" class="text-gray-700 text-base">
+
+ <p class="mb-2">
+        Revenons à Louis. Après avoir noté sa dernière intervention, il commence à utiliser une feuille simple pour chaque panne : date, symptôme, cause probable, action corrective, durée d’arrêt. Petit à petit, il constate des schémas récurrents.
+Il s’entraîne aux <strong class="text-cyan-500 text-base">"5 pourquoi" avec ses collègues</strong>.
+ Ensemble, <strong class="text-red-400 text-base">ils découvrent que plusieurs arrêts proviennent non pas des machines, mais d’un mauvais stockage des pièces d’usure ! Résultat : des pièces déformées entraînent des blocages mécaniques.</strong>
+Grâce à cette prise de conscience, l’équipe met en place un nouveau rangement et une maintenance préventive légère. En quelques semaines, le taux de pannes chute de 30 %.
+
+</p>
+      
+    </div>
+
+
+
+    <div *ngIf="currentChapter === 5" class="text-gray-700 text-base">
+    <p>
+        Louis ne travaille plus "dans l’urgence permanente". En impliquant ses collègues, en exploitant les données et en structurant les interventions, il a contribué à transformer la culture de l’atelier. La maintenance corrective n’est plus un fardeau, mais un point de départ vers l’amélioration continue.
+<strong class="text-cyan-400 text-base">Aujourd’hui,</strong> son équipe alterne maintenance corrective ciblée, entretien préventif et projets d’optimisation. Elle a même gagné en autonomie vis-à-vis des fournisseurs.
+<strong class="text-cyan-400 text-base">En conclusion,</strong> la maintenance corrective est une réalité incontournable. Bien gérée, elle devient une formidable opportunité de progrès, d’apprentissage et de réduction des coûts cachés.
+
+    </p>
+    </div>
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<div *ngIf="currentChapter === 6" class="text-gray-700 text-base">
+  <!-- Évaluation -->
+  <div class="mt-6 p-4 border border-gray-300 rounded-lg bg-gray-50">
+    <h3 class="text-lg font-semibold text-blue-700 mb-2">📝 Mini-Évaluation</h3>
+    <p class="mb-2 font-medium">❓ Pourquoi la maintenance corrective peut-elle devenir un levier d’amélioration continue dans un atelier de production ?</p>
+    <ul class="mb-2 space-y-2">
+      <li>🔘 Parce qu’elle consiste uniquement à réparer les pannes au plus vite, sans analyse.</li>
+      <li>🔘 Parce qu’en analysant les causes des pannes, elle permet de mettre en place des actions préventives et d’optimiser l’organisation.</li>
+      <li>🔘 Parce qu’elle remplace entièrement la maintenance préventive.</li>
+    </ul>
+
+    <!-- Bouton Réponse -->
+    <span class="text-blue-600 cursor-pointer underline" (click)="showAnswer = !showAnswer">
+      Afficher la réponse
+    </span>
+
+    <!-- Réponse affichée si cliqué -->
+    <p *ngIf="showAnswer" class="mt-4 text-green-600 italic">
+      ✅ Réponse correcte : la deuxième.  En comprenant les causes profondes des pannes, comme l’a fait Louis, on peut réduire leur fréquence, structurer les interventions, impliquer les équipes et améliorer durablement la performance de l’atelier. 🔍🔧📉
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Boutons navigation -->
+    <div class="flex justify-between items-center mt-6">
+      <button
+        class="px-4 py-2 rounded bg-gray-300 text-gray-800 hover:bg-gray-400 transition disabled:opacity-50"
+        (click)="previousChapter()"
+        [disabled]="currentChapter === 1">
+        👈 Précédent
+      </button>
+
+      <button
+        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition disabled:bg-gray-400"
+        (click)="nextChapter()"
+        [disabled]="currentChapter === 11">
+        Suivant 👉
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+ <!-- Partie droite : image -->
+  <div class="w-[45%] ml-10 flex items-center justify-center mb-8">
+    <img
+      src="assets/images/chapitre1.jpg"
+      alt="Maintenance"
+      class="max-w-full max-h-[80vh] rounded-lg shadow-md"
+    />
+  </div>
+  <!-- Partie droite : image 
+  <div class="w-[45%] ml-10 flex items-center justify-center">
+    <img
+      [src]="'assets/images/chapitre' + currentChapter + '.jpg'"
+      [alt]="'Image du chapitre ' + currentChapter"
+      class="max-w-full max-h-[80vh] rounded-lg shadow-md"
+    />
+  </div>-->
+</div>
+
